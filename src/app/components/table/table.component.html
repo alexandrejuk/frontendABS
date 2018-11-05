@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nome</th>
+      <th scope="col">Sobrenome</th>
+      <th scope="col">Participação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td class="text-center">{{ employee?.id }}</td>
+      <td>{{ employee?.firstName }}</td>
+      <td>{{ employee?.lastName }}</td>
+      <td class="text-center">{{ employee.participation }}%</td>
+    </tr>
+  </tbody>
+</table>

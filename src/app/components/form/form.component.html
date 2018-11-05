@@ -1,0 +1,26 @@
+<form class="employee-form" [formGroup]="employeeForm">
+  <div class="form-group">
+    <input type="text" class="input-form" placeholder="Nome" formControlName="firstName">
+    <small class="message-alert"
+      *ngIf="employeeForm.get('firstName').hasError('required') && employeeForm.get('firstName').touched">
+      Nome é Obrigatório!
+    </small>
+  </div>
+  <div class="form-group">
+    <input type="text" class="input-form" placeholder="Sobrenome" formControlName="lastName">
+    <small class="message-alert"
+      *ngIf="employeeForm.get('lastName').hasError('required') && employeeForm.get('lastName').touched">
+      Sobrenome é Obrigatório!
+    </small>
+  </div>
+  <div class="form-group">
+    <input type="number" class="input-form" placeholder="Participação" formControlName="participation">
+    <small class="message-alert"
+      *ngIf="employeeForm.get('participation').hasError('required') && employeeForm.get('participation').touched">
+      Participação é Obrigatório!
+    </small>
+  </div>
+  <div class="form-group">
+    <input class="button-form" type="button" value="ENVIAR" (click)="save()">
+  </div>
+</form>

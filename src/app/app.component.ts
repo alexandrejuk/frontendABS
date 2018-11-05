@@ -47,5 +47,6 @@ export class AppComponent implements OnInit {
 
   saveEmployee(e) {
     this.employeeService.addEmployee(this.employeeForm.value);
+    this.initForm();
   }
 }
